@@ -1,7 +1,12 @@
 #include "elev.h"
 #include "io.h"
 
+int prev_dir;
 
+void hw_motor_dir(int dir){
+	elev_set_motor_direction(dir);
+	prev_dir = dir;
+}
 
 void hw_door_opener() {
 	elev_set_door_open_lamp(1);

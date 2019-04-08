@@ -1,5 +1,6 @@
 #pragma once
 
+extern int prev_dir;
 //Door
 void hw_door_opener();
 void hw_door_closer();
@@ -16,3 +17,7 @@ void hw_turn_off_button_light(int flr, int dir);
 
 //button functions
 void hw_button_emerg_stop();
+
+
+//motor
+void hw_motor_dir(int dir);

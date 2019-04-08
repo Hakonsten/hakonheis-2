@@ -9,6 +9,8 @@ void fsm_go_to_idle(); //go to idle
 void fsm_add_order();
 int fsm_has_order();
 void fsm_print_queue();
+int has_orders_below();
+int has_orders_above();
 
 
 
@@ -21,5 +23,5 @@ state_t state_OPENDOOR();
 state_t state_INIT();
 state_t state_MOVE();
 state_t state_EMERGENCY_STOP();
-state_t get_order_at_floor(int currentFloor);
+int should_stop_at_floor(int currentFloor);
 state_t fsm_execute_orders();

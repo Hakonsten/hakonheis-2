@@ -1,13 +1,15 @@
-#include "hardware.h"
 #include "elev.h"
 #include "io.h"
 
 
 
 void hw_door_opener() {
-		elev_set_door_open_lamp(1);
-	}
+	elev_set_door_open_lamp(1);
+}
 
+void hw_door_closer() {
+	elev_set_door_open_lamp(0);
+}
 
 
 int hw_floor_sensor_read() {
@@ -64,5 +66,3 @@ BUTTON_CALL_DOWN or BUTTON_COMMAND (button "inside the elevator).
 @param floor Which floor to check button. Must be 0-3.
 @return 0 if button is not pushed. 1 if button is pushed.
 */
-
-

@@ -4,8 +4,6 @@
 /*Global time variable that
 keeps track of how many seconds have elapsed*/
 
-int timeElapsed = 0; 
-
 
 
 
@@ -21,7 +19,9 @@ and use therefore binary logic to element the
 
 int time_is_up();
 
-/* sets timeElapsed back 
+/* sets timeElapsed back
 to default state which is 0*/
 
-void time_end_timer(); 
+void time_end_timer();
+
+int get_timeElapsed();

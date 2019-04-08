@@ -1,5 +1,7 @@
 #include <time.h>
-#include "timer.h"
+#include "stdio.h"
+
+int timeElapsed = 0;
 
 
 void time_begin_timer() {
@@ -7,7 +9,8 @@ void time_begin_timer() {
 }
 
 int time_is_up() {
-	if (difftime(time(NULL), timeElapsed) >= 3) {
+	printf("tid %ld", (time(NULL) - timeElapsed));
+	if ((time(NULL) - timeElapsed) >= 3) {
 		return 1;
 	}
 	return 0;
@@ -16,4 +19,8 @@ int time_is_up() {
 
 void time_end_timer() {
 	timeElapsed = 0;
+}
+
+int get_timeElapsed(){
+	return timeElapsed;
 }
